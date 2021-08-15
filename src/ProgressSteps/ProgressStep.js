@@ -97,6 +97,8 @@ class ProgressStep extends Component {
         mainButtonsStyle={this.props.mainButtonsStyle}
         previousButtonLayoutStyle={this.props.previousButtonLayoutStyle}
         nextButtonLayoutStyle={this.props.nextButtonLayoutStyle}
+        hidePreviousButton={this.props.hidePreviousButton}
+        hideNextButton={this.props.hideNextButton}
       />
     );
 
