@@ -9,23 +9,23 @@ class StepIcon extends Component {
     if (this.props.isActiveStep) {
       styles = {
         circleStyle: {
-          width: 40,
-          height: 40,
-          borderRadius: 20,
+          width: this.props.activeStepCircleWidth ? this.props.activeStepCircleWidth : 40,
+          height: this.props.activeStepCircleHeight ? this.props.activeStepCircleHeight : 40,
+          borderRadius: this.props.activeStepCircleBorderRadius ? this.props.activeStepCircleBorderRadius : 20,
           backgroundColor: this.props.activeStepIconColor,
           borderColor: this.props.activeStepIconBorderColor,
-          borderWidth: 5,
-          bottom: 2,
+          borderWidth: this.props.activeStepCircleBorderWidth ? this.props.activeStepCircleBorderWidth : 5,
+          bottom: this.props.activeStepCircleBottom ? this.props.activeStepCircleBottom : 2,
         },
-        circleText: {
+        circleText: [{
           alignSelf: 'center',
           top: 20 / 3,
-        },
+        }, this.props.activeStepCircleText],
         labelText: {
           textAlign: 'center',
-          flexWrap: 'wrap',
-          width: 100,
-          paddingTop: 4,
+          flexWrap: this.props.activeStepLabelTextFlexWrap ? this.props.activeStepLabelTextFlexWrap : 'wrap',
+          width: this.props.activeStepLabelTextWidth ? this.props.activeStepLabelTextWidth : 100,
+          paddingTop: this.props.activeStepLabelTextPaddingTop ? this.props.activeStepLabelTextPaddingTop : 4,
           fontFamily: this.props.labelFontFamily,
           color: this.props.activeLabelColor,
           fontSize: this.props.activeLabelFontSize || this.props.labelFontSize,
@@ -50,9 +50,9 @@ class StepIcon extends Component {
           borderTopColor: this.props.progressBarColor,
           marginLeft: 40 / 2 + 2,
         },
-        stepNum: {
+        stepNum: [{
           color: this.props.activeStepNumColor,
-        },
+        }, this.props.activeStepNum],
       };
     } else if (this.props.isCompletedStep) {
       styles = {
@@ -62,18 +62,18 @@ class StepIcon extends Component {
           borderRadius: 18,
           backgroundColor: this.props.completedStepIconColor,
         },
-        circleText: {
+        circleText: [{
           alignSelf: 'center',
           top: 18 / 2,
-        },
+        }, this.props.completedStepCircleText],
         labelText: {
           textAlign: 'center',
-          flexWrap: 'wrap',
-          width: 100,
-          paddingTop: 4,
+          flexWrap: this.props.completedStepLabelTextFlexWrap ? this.props.completedStepLabelTextFlexWrap : 'wrap',
+          width: this.props.completedStepLabelTextWidth ? this.props.completedStepLabelTextWidth : 100,
+          paddingTop: this.props.completedStepLabelTextPaddingTop ? this.props.completedStepLabelTextPaddingTop : 4,
           fontFamily: this.props.labelFontFamily,
           color: this.props.completedLabelColor,
-          marginTop: 4,
+          marginTop:  this.props.completedStepLabelTextMarginTop ? this.props.completedStepLabelTextMarginTop : 4,
           fontSize: this.props.labelFontSize,
         },
         leftBar: {
@@ -96,9 +96,9 @@ class StepIcon extends Component {
           borderTopColor: this.props.completedProgressBarColor,
           marginLeft: 36 / 2 + 4,
         },
-        stepNum: {
+        stepNum: [{
           color: this.props.completedStepNumColor,
-        },
+        }, this.props.completedStepNum],
       };
     } else {
       styles = {
@@ -108,18 +108,18 @@ class StepIcon extends Component {
           borderRadius: 18,
           backgroundColor: this.props.disabledStepIconColor,
         },
-        circleText: {
+        circleText: [{
           alignSelf: 'center',
           top: 18 / 2,
-        },
+        }, this.props.stepCircleText],
         labelText: {
           textAlign: 'center',
-          flexWrap: 'wrap',
-          width: 100,
-          paddingTop: 4,
+          flexWrap: this.props.stepLabelTextFlexWrap ? this.props.stepLabelTextFlexWrap : 'wrap',
+          width: this.props.stepLabelTextWidth ? this.props.stepLabelTextWidth : 100,
+          paddingTop: this.props.stepLabelTextPaddingTop ? this.props.stepLabelTextPaddingTop : 4,
           fontFamily: this.props.labelFontFamily,
           color: this.props.labelColor,
-          marginTop: 4,
+          marginTop:  this.props.stepLabelTextMarginTop ? this.props.stepLabelTextMarginTop : 4,
           fontSize: this.props.labelFontSize,
         },
         leftBar: {
@@ -142,9 +142,9 @@ class StepIcon extends Component {
           borderTopColor: this.props.progressBarColor,
           marginLeft: 36 / 2 + 4,
         },
-        stepNum: {
+        stepNum: [{
           color: this.props.disabledStepNumColor,
-        },
+        }, this.props.stepNum],
       };
     }
 

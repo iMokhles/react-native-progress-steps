@@ -1,6 +1,6 @@
 {
-  "name": "react-native-progress-steps",
-  "version": "1.3.4",
+  "name": "@imokhles/react-native-progress-steps",
+  "version": "1.3.5",
   "description": "A simple and fully customizable React Native component that implements a progress stepper UI.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/colbymillerdev/react-native-progress-steps.git"
+    "url": "git+https://github.com/imokhles/react-native-progress-steps.git"
   },
   "keywords": [
     "react-native",
@@ -22,14 +22,18 @@
     "ui",
     "stepper",
     "progress",
-    "progress steps"
+    "progress steps",
+    "form multistep",
+    "multi step",
+    "react-native multi step",
+    "react native multi step"
   ],
-  "author": "Colby Miller",
+  "author": "iMokhles",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/colbymillerdev/react-native-progress-steps/issues"
+    "url": "https://github.com/imokhles/react-native-progress-steps/issues"
   },
-  "homepage": "https://github.com/colbymillerdev/react-native-progress-steps#readme",
+  "homepage": "https://github.com/imokhles/react-native-progress-steps#readme",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.51.1"
   },
